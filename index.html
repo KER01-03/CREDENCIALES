@@ -1382,6 +1382,43 @@ const empleados = {
 
 
 /* =====================================
+   TOKENS DE URL (NO SECUENCIALES)
+===================================== */
+
+/*
+    Cada empleado tiene un token aleatorio
+    para la URL, sin relación con el
+    anterior o el siguiente (a diferencia
+    de EMP001, EMP002...), para que no se
+    pueda "adivinar" cambiando el número.
+
+    Para dar de alta un nuevo empleado:
+    1. Agrega su registro en "empleados"
+       con su propio EMPxxx.
+    2. Genera un token nuevo, por ejemplo
+       con este comando en terminal:
+           openssl rand -hex 5
+    3. Agrega la línea "token": "EMPxxx"
+       aquí abajo.
+
+    Tokens ya generados y libres para los
+    próximos 3 empleados:
+        86e4510555
+        2a67ed1f9d
+        6abe3a2fa4
+*/
+
+const mapaTokens = {
+
+    "aaa6334cc8": "EMP001",
+
+    "35bc496174": "EMP002"
+
+};
+
+
+
+/* =====================================
    OBTENER ID DEL EMPLEADO
 ===================================== */
 
@@ -1392,8 +1429,12 @@ const parametros =
     );
 
 
-const empleadoID =
+const tokenURL =
     parametros.get("id");
+
+
+const empleadoID =
+    mapaTokens[tokenURL];
 
 
 const empleado =
