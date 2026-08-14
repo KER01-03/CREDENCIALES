@@ -911,6 +911,24 @@ body {
 
             <span class="etiqueta">
 
+                CURP
+
+            </span>
+
+            <span
+                id="curp"
+                class="valor"
+            >
+
+            </span>
+
+        </div>
+
+
+        <div class="dato">
+
+            <span class="etiqueta">
+
                 Fecha de nacimiento
 
             </span>
@@ -1241,6 +1259,10 @@ const empleados = {
             "jonathanbarreraricardo326@gmail.com",
 
 
+        curp:
+            "",
+
+
         fechaNacimiento:
             "03/09/2002",
 
@@ -1298,6 +1320,10 @@ const empleados = {
             "maria@ejemplo.com",
 
 
+        curp:
+            "",
+
+
         fechaNacimiento:
             "20/08/1998",
 
@@ -1333,6 +1359,147 @@ const empleados = {
         foto:
             "fotos/emp002.jpg"
 
+    },
+
+
+    "EMP003": {
+
+        nombre:
+            "",
+
+        puesto:
+            "",
+
+        telefono:
+            "",
+
+        correo:
+            "",
+
+        curp:
+            "",
+
+        fechaNacimiento:
+            "",
+
+        rfc:
+            "",
+
+        codigoPostal:
+            "",
+
+        imss:
+            "",
+
+        emergenciaNombre1:
+            "",
+
+        emergenciaTelefono1:
+            "",
+
+        emergenciaNombre2:
+            "",
+
+        emergenciaTelefono2:
+            "",
+
+        foto:
+            "fotos/emp003.jpg"
+
+    },
+
+
+    "EMP004": {
+
+        nombre:
+            "",
+
+        puesto:
+            "",
+
+        telefono:
+            "",
+
+        correo:
+            "",
+
+        curp:
+            "",
+
+        fechaNacimiento:
+            "",
+
+        rfc:
+            "",
+
+        codigoPostal:
+            "",
+
+        imss:
+            "",
+
+        emergenciaNombre1:
+            "",
+
+        emergenciaTelefono1:
+            "",
+
+        emergenciaNombre2:
+            "",
+
+        emergenciaTelefono2:
+            "",
+
+        foto:
+            "fotos/emp004.jpg"
+
+    },
+
+
+    "EMP005": {
+
+        nombre:
+            "",
+
+        puesto:
+            "",
+
+        telefono:
+            "",
+
+        correo:
+            "",
+
+        curp:
+            "",
+
+        fechaNacimiento:
+            "",
+
+        rfc:
+            "",
+
+        codigoPostal:
+            "",
+
+        imss:
+            "",
+
+        emergenciaNombre1:
+            "",
+
+        emergenciaTelefono1:
+            "",
+
+        emergenciaNombre2:
+            "",
+
+        emergenciaTelefono2:
+            "",
+
+        foto:
+            "fotos/emp005.jpg"
+
     }
 
 };
@@ -1350,7 +1517,12 @@ const empleados = {
     de EMP001, EMP002...), para que no se
     pueda "adivinar" cambiando el número.
 
-    Para dar de alta un nuevo empleado:
+    Ya están listos EMP001 a EMP005 (edita
+    sus datos directamente en "empleados",
+    ahí arriba, en las comillas vacías).
+
+    Si más adelante das de alta un EMP006
+    en adelante:
     1. Agrega su registro en "empleados"
        con su propio EMPxxx.
     2. Genera un token nuevo, por ejemplo
@@ -1358,19 +1530,19 @@ const empleados = {
            openssl rand -hex 5
     3. Agrega la línea "token": "EMPxxx"
        aquí abajo.
-
-    Tokens ya generados y libres para los
-    próximos 3 empleados:
-        86e4510555
-        2a67ed1f9d
-        6abe3a2fa4
 */
 
 const mapaTokens = {
 
     "aaa6334cc8": "EMP001",
 
-    "35bc496174": "EMP002"
+    "35bc496174": "EMP002",
+
+    "86e4510555": "EMP003",
+
+    "2a67ed1f9d": "EMP004",
+
+    "6abe3a2fa4": "EMP005"
 
 };
 
@@ -1421,6 +1593,11 @@ if (empleado) {
     document.getElementById("correo")
         .textContent =
         empleado.correo;
+
+
+    document.getElementById("curp")
+        .textContent =
+        empleado.curp;
 
 
     document.getElementById("fechaNacimiento")
