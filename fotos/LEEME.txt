@@ -1,0 +1,26 @@
+Carpeta de fotos de empleados
+==============================
+
+Sube aquí la foto de cada empleado con EXACTAMENTE este nombre
+de archivo (respeta minúsculas y el número con 3 dígitos),
+en formato .jpg:
+
+    emp001.jpg   -> Jonathan Barrera Ricardo
+    emp002.jpg   -> María López García
+    emp003.jpg   -> (libre para el próximo empleado)
+    emp004.jpg   -> (libre para el próximo empleado)
+    emp005.jpg   -> (libre para el próximo empleado)
+
+El nombre del archivo va ligado al ID interno del empleado
+(EMP001, EMP002...) que está en el objeto "empleados" del
+index.html, NO al token que se usa en la URL. Así que aunque
+el token de la URL cambie, el nombre de la foto no.
+
+Recomendaciones:
+- Usa fotos cuadradas o casi cuadradas (se recortan en círculo).
+- Peso ligero (idealmente menos de 300 KB) para que cargue rápido.
+- Si subes una imagen en otro formato (.png, .jpeg, .webp), avísame
+  para actualizar la ruta correspondiente en index.html.
+
+Este archivo (LEEME.txt) es solo para que la carpeta no quede
+vacía en git; puedes dejarlo o borrarlo, no afecta la credencial.
