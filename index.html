@@ -1,318 +1,1693 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Credencial de empleado</title>
+<meta charset="UTF-8">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        body {
-            min-height: 100vh;
-            background: #f2f2f2;
-            font-family: Arial, sans-serif;
+<title>Credencial digital</title>
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
-            padding: 20px;
-        }
+<style>
 
-        .credencial {
-            width: 100%;
-            max-width: 380px;
-            background: white;
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
 
-            border-radius: 20px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-            padding: 30px 25px;
 
-            text-align: center;
+body {
 
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
+    min-height: 100vh;
 
-        .logo {
-            width: 80px;
-            height: 80px;
+    background:
+        linear-gradient(
+            145deg,
+            #071a33,
+            #0d2d52
+        );
 
-            margin: 0 auto 15px;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-            border-radius: 50%;
+    display: flex;
 
-            object-fit: cover;
+    justify-content: center;
 
-            background: #eeeeee;
-        }
+    align-items: center;
 
-        .titulo {
-            font-size: 14px;
-            color: #777;
+    padding: 20px;
 
-            text-transform: uppercase;
+}
 
-            letter-spacing: 2px;
 
-            margin-bottom: 10px;
-        }
+/* =====================================
+   TARJETA PRINCIPAL
+===================================== */
 
-        .foto {
-            width: 120px;
-            height: 120px;
+.credencial {
 
-            border-radius: 50%;
+    width: 100%;
 
-            object-fit: cover;
+    max-width: 430px;
 
-            border: 4px solid #eeeeee;
+    background: white;
 
-            margin: 10px auto 20px;
+    border-radius: 26px;
 
-            display: block;
-        }
+    overflow: hidden;
 
-        .nombre {
-            font-size: 24px;
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,0.30);
 
-            font-weight: bold;
+}
 
-            color: #222;
 
-            margin-bottom: 5px;
-        }
+/* =====================================
+   ENCABEZADO
+===================================== */
 
-        .puesto {
-            font-size: 16px;
+.encabezado {
 
-            color: #666;
+    background: #071a33;
 
-            margin-bottom: 25px;
-        }
+    color: white;
 
-        .datos {
-            text-align: left;
+    padding:
+        25px 20px 75px;
 
-            border-top: 1px solid #eeeeee;
+    text-align: center;
 
-            padding-top: 15px;
-        }
+    position: relative;
 
-        .dato {
-            display: flex;
+}
 
-            justify-content: space-between;
 
-            padding: 10px 0;
+.logo {
 
-            border-bottom: 1px solid #eeeeee;
+    width: 75px;
 
-            font-size: 14px;
-        }
+    height: 75px;
 
-        .etiqueta {
-            color: #777;
+    object-fit: contain;
 
-            font-weight: bold;
-        }
+    background: white;
 
-        .valor {
-            color: #222;
+    border-radius: 15px;
 
-            text-align: right;
-        }
+    padding: 7px;
 
-        .estado {
-            margin-top: 20px;
+    margin-bottom: 14px;
 
-            display: inline-block;
+}
 
-            padding: 8px 18px;
 
-            border-radius: 20px;
+.titulo {
 
-            background: #e8f7ed;
+    font-size: 12px;
 
-            color: #218838;
+    letter-spacing: 2.5px;
 
-            font-weight: bold;
+    text-transform: uppercase;
 
-            font-size: 14px;
-        }
+    opacity: 0.85;
 
-        .id {
-            margin-top: 20px;
+}
 
-            color: #999;
 
-            font-size: 12px;
-        }
-    </style>
+/* =====================================
+   FOTO
+===================================== */
+
+.contenedor-foto {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -65px;
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+.foto {
+
+    width: 130px;
+
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    background: #eeeeee;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0,0,0,0.20);
+
+}
+
+
+/* =====================================
+   INFORMACIÓN PRINCIPAL
+===================================== */
+
+.informacion-principal {
+
+    text-align: center;
+
+    padding:
+        82px 25px 25px;
+
+}
+
+
+.nombre {
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    color: #071a33;
+
+    line-height: 1.15;
+
+    margin-bottom: 8px;
+
+}
+
+
+.puesto {
+
+    font-size: 15px;
+
+    color: #687384;
+
+    margin-bottom: 10px;
+
+}
+
+
+.id-empleado {
+
+    display: inline-block;
+
+    background: #eef3f8;
+
+    color: #071a33;
+
+    padding:
+        6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================
+   CONTACTO
+===================================== */
+
+.contacto {
+
+    margin:
+        0 20px 20px;
+
+    padding: 17px;
+
+    background: #f5f7fa;
+
+    border-radius: 16px;
+
+}
+
+
+.contacto-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 8px 0;
+
+}
+
+
+.icono {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 10px;
+
+    background: #071a33;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.contacto-texto {
+
+    text-align: left;
+
+    overflow: hidden;
+
+}
+
+
+.contacto-etiqueta {
+
+    font-size: 10px;
+
+    color: #8a94a3;
+
+    display: block;
+
+}
+
+
+.contacto-valor {
+
+    font-size: 14px;
+
+    color: #202733;
+
+    word-break: break-word;
+
+}
+
+
+/* =====================================
+   ESTADO
+===================================== */
+
+.estado {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.estado span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        8px 16px;
+
+    background: #e9f7ef;
+
+    color: #168044;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.punto {
+
+    width: 8px;
+
+    height: 8px;
+
+    background: #168044;
+
+    border-radius: 50%;
+
+}
+
+
+/* =====================================
+   BOTÓN ADMINISTRATIVO
+===================================== */
+
+.boton-admin {
+
+    width:
+        calc(100% - 40px);
+
+    margin:
+        0 20px 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #071a33;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.boton-admin:hover {
+
+    background: #0d2d52;
+
+}
+
+
+/* =====================================
+   INFORMACIÓN ADMINISTRATIVA
+===================================== */
+
+.informacion-admin {
+
+    display: none;
+
+    padding:
+        0 20px 25px;
+
+}
+
+
+.informacion-admin.mostrar {
+
+    display: block;
+
+}
+
+
+.titulo-seccion {
+
+    color: #071a33;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin:
+        15px 0 12px;
+
+    padding-bottom: 8px;
+
+    border-bottom:
+        2px solid #071a33;
+
+}
+
+
+.dato {
+
+    padding:
+        11px 0;
+
+    border-bottom:
+        1px solid #e8ebef;
+
+}
+
+
+.etiqueta {
+
+    display: block;
+
+    color: #8993a1;
+
+    font-size: 11px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.valor {
+
+    display: block;
+
+    color: #222b36;
+
+    font-size: 14px;
+
+    word-break: break-word;
+
+}
+
+
+/* =====================================
+   EMERGENCIAS
+===================================== */
+
+.emergencia {
+
+    background: #f5f7fa;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+}
+
+
+.emergencia-titulo {
+
+    color: #071a33;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =====================================
+   MODAL DE SEGURIDAD
+===================================== */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,0.65);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+
+}
+
+
+.modal.mostrar {
+
+    display: flex;
+
+}
+
+
+.modal-contenido {
+
+    width: 100%;
+
+    max-width: 350px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 28px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,0.35);
+
+}
+
+
+.icono-seguridad {
+
+    width: 60px;
+
+    height: 60px;
+
+    margin:
+        0 auto 15px;
+
+    background: #071a33;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+}
+
+
+.modal-titulo {
+
+    color: #071a33;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+}
+
+
+.modal-texto {
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+
+}
+
+
+.input-año {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid #d9dee5;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    outline: none;
+
+    margin-bottom: 12px;
+
+}
+
+
+.input-año:focus {
+
+    border-color: #071a33;
+
+}
+
+
+.boton-continuar {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #071a33;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.boton-cancelar {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    margin-top: 5px;
+
+    cursor: pointer;
+
+}
+
+
+.mensaje-error {
+
+    color: #c62828;
+
+    font-size: 12px;
+
+    margin-top: 10px;
+
+    display: none;
+
+}
+
+
+.mensaje-error.mostrar {
+
+    display: block;
+
+}
+
+
+/* =====================================
+   PIE
+===================================== */
+
+.pie {
+
+    text-align: center;
+
+    padding: 15px;
+
+    background: #071a33;
+
+    color: white;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================
+   ERROR
+===================================== */
+
+.error {
+
+    padding: 50px 25px;
+
+    text-align: center;
+
+    color: #071a33;
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-    <div class="credencial">
 
-        <img 
+<!-- ===================================
+     CREDENCIAL
+=================================== -->
+
+<div
+    class="credencial"
+    id="credencial"
+>
+
+
+    <!-- ENCABEZADO -->
+
+    <div class="encabezado">
+
+
+        <img
+            src="logo.png"
             class="logo"
-            src="https://via.placeholder.com/150"
-            alt="Logo"
+            alt="Logo de la empresa"
         >
+
 
         <div class="titulo">
-            Credencial de empleado
-        </div>
 
-        <img 
-            id="foto"
-            class="foto"
-            src="https://via.placeholder.com/300"
-            alt="Foto del empleado"
-        >
-
-        <div id="nombre" class="nombre">
-            Cargando...
-        </div>
-
-        <div id="puesto" class="puesto">
-        </div>
-
-        <div class="datos">
-
-            <div class="dato">
-                <span class="etiqueta">ID</span>
-                <span id="id" class="valor"></span>
-            </div>
-
-            <div class="dato">
-                <span class="etiqueta">Área</span>
-                <span id="area" class="valor"></span>
-            </div>
-
-            <div class="dato">
-                <span class="etiqueta">Ingreso</span>
-                <span id="ingreso" class="valor"></span>
-            </div>
+            Credencial digital
 
         </div>
 
-        <div id="estado" class="estado">
+
+        <div class="contenedor-foto">
+
+
+            <img
+                id="foto"
+                src="fotos/juan.jpg"
+                class="foto"
+                alt="Foto del empleado"
+            >
+
+
         </div>
+
 
     </div>
 
 
+
+    <!-- INFORMACIÓN PRINCIPAL -->
+
+    <div
+        class="informacion-principal"
+    >
+
+
+        <div
+            id="nombre"
+            class="nombre"
+        >
+
+            Cargando...
+
+        </div>
+
+
+        <div
+            id="puesto"
+            class="puesto"
+        >
+
+        </div>
+
+
+        <div
+            id="idEmpleado"
+            class="id-empleado"
+        >
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- CONTACTO -->
+
+    <div class="contacto">
+
+
+        <div class="contacto-item">
+
+
+            <div class="icono">
+                📱
+            </div>
+
+
+            <div class="contacto-texto">
+
+
+                <span
+                    class="contacto-etiqueta"
+                >
+
+                    TELÉFONO
+
+                </span>
+
+
+                <span
+                    id="telefono"
+                    class="contacto-valor"
+                >
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="contacto-item">
+
+
+            <div class="icono">
+                ✉️
+            </div>
+
+
+            <div class="contacto-texto">
+
+
+                <span
+                    class="contacto-etiqueta"
+                >
+
+                    CORREO
+
+                </span>
+
+
+                <span
+                    id="correo"
+                    class="contacto-valor"
+                >
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ESTADO -->
+
+    <div class="estado">
+
+
+        <span>
+
+            <span class="punto"></span>
+
+            EMPLEADO ACTIVO
+
+        </span>
+
+
+    </div>
+
+
+
+    <!-- BOTÓN -->
+
+    <button
+        class="boton-admin"
+        id="botonAdmin"
+        onclick="abrirSeguridad()"
+    >
+
+        🔐 Ver información administrativa
+
+    </button>
+
+
+
+    <!-- INFORMACIÓN ADMINISTRATIVA -->
+
+    <div
+        class="informacion-admin"
+        id="informacionAdmin"
+    >
+
+
+        <div class="titulo-seccion">
+
+            Información personal
+
+        </div>
+
+
+        <div class="dato">
+
+            <span class="etiqueta">
+
+                Fecha de nacimiento
+
+            </span>
+
+            <span
+                id="fechaNacimiento"
+                class="valor"
+            >
+
+            </span>
+
+        </div>
+
+
+
+        <div class="titulo-seccion">
+
+            Información fiscal
+
+        </div>
+
+
+        <div class="dato">
+
+            <span class="etiqueta">
+
+                RFC
+
+            </span>
+
+            <span
+                id="rfc"
+                class="valor"
+            >
+
+            </span>
+
+        </div>
+
+
+        <div class="dato">
+
+            <span class="etiqueta">
+
+                Código postal de la
+                constancia de situación fiscal
+
+            </span>
+
+            <span
+                id="codigoPostal"
+                class="valor"
+            >
+
+            </span>
+
+        </div>
+
+
+
+        <div class="titulo-seccion">
+
+            Seguridad social
+
+        </div>
+
+
+        <div class="dato">
+
+            <span class="etiqueta">
+
+                Número de afiliación al IMSS
+
+            </span>
+
+            <span
+                id="imss"
+                class="valor"
+            >
+
+            </span>
+
+        </div>
+
+
+
+        <div class="titulo-seccion">
+
+            Contactos de emergencia
+
+        </div>
+
+
+        <div class="emergencia">
+
+
+            <div class="emergencia-titulo">
+
+                🚨 Contacto 1
+
+            </div>
+
+
+            <div class="dato">
+
+                <span class="etiqueta">
+
+                    Nombre
+
+                </span>
+
+                <span
+                    id="emergenciaNombre1"
+                    class="valor"
+                >
+
+                </span>
+
+            </div>
+
+
+            <div class="dato">
+
+                <span class="etiqueta">
+
+                    Teléfono
+
+                </span>
+
+                <span
+                    id="emergenciaTelefono1"
+                    class="valor"
+                >
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="emergencia">
+
+
+            <div class="emergencia-titulo">
+
+                🚨 Contacto 2
+
+            </div>
+
+
+            <div class="dato">
+
+                <span class="etiqueta">
+
+                    Nombre
+
+                </span>
+
+                <span
+                    id="emergenciaNombre2"
+                    class="valor"
+                >
+
+                </span>
+
+            </div>
+
+
+            <div class="dato">
+
+                <span class="etiqueta">
+
+                    Teléfono
+
+                </span>
+
+                <span
+                    id="emergenciaTelefono2"
+                    class="valor"
+                >
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- PIE -->
+
+    <div class="pie">
+
+        Documento de identificación laboral
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ===================================
+     VENTANA DE SEGURIDAD
+=================================== -->
+
+<div
+    class="modal"
+    id="modalSeguridad"
+>
+
+
+    <div class="modal-contenido">
+
+
+        <div class="icono-seguridad">
+
+            🔐
+
+        </div>
+
+
+        <div class="modal-titulo">
+
+            Información protegida
+
+        </div>
+
+
+        <div class="modal-texto">
+
+            Para consultar la información
+            administrativa, introduce tu
+            año de nacimiento.
+
+        </div>
+
+
+        <input
+
+            type="number"
+
+            id="inputAño"
+
+            class="input-año"
+
+            placeholder="Ej. 1995"
+
+            min="1900"
+
+            max="2100"
+
+        >
+
+
+        <button
+            class="boton-continuar"
+            onclick="validarAño()"
+        >
+
+            Continuar
+
+        </button>
+
+
+        <button
+            class="boton-cancelar"
+            onclick="cerrarSeguridad()"
+        >
+
+            Cancelar
+
+        </button>
+
+
+        <div
+            id="mensajeError"
+            class="mensaje-error"
+        >
+
+            El año de nacimiento
+            no coincide.
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
 <script>
+
+
+/* =====================================
+   DATOS DE LOS EMPLEADOS
+===================================== */
+
 
 const empleados = {
 
+
     "EMP001": {
 
-        nombre: "Juan Pérez López",
 
-        puesto: "Ejecutivo de ventas",
+        nombre:
+            "Juan Pérez López",
 
-        area: "Ventas",
 
-        ingreso: "10/02/2026",
+        puesto:
+            "Ejecutivo de ventas",
 
-        estado: "ACTIVO",
 
-        foto: "https://via.placeholder.com/300"
+        telefono:
+            "555 555 5555",
+
+
+        correo:
+            "juan@ejemplo.com",
+
+
+        fechaNacimiento:
+            "15/04/1995",
+
+
+        rfc:
+            "XXXX000000XXX",
+
+
+        codigoPostal:
+            "50000",
+
+
+        imss:
+            "00000000000",
+
+
+        emergenciaNombre1:
+            "María López",
+
+
+        emergenciaTelefono1:
+            "555 111 1111",
+
+
+        emergenciaNombre2:
+            "Carlos Pérez",
+
+
+        emergenciaTelefono2:
+            "555 222 2222",
+
+
+        foto:
+            "fotos/juan.jpg"
 
     },
+
 
     "EMP002": {
 
-        nombre: "María López García",
 
-        puesto: "Recepcionista",
+        nombre:
+            "María López García",
 
-        area: "Administración",
 
-        ingreso: "15/03/2026",
+        puesto:
+            "Recepcionista",
 
-        estado: "ACTIVO",
 
-        foto: "https://via.placeholder.com/300"
+        telefono:
+            "555 666 6666",
 
-    },
 
-    "EMP003": {
+        correo:
+            "maria@ejemplo.com",
 
-        nombre: "Carlos Hernández",
 
-        puesto: "Supervisor",
+        fechaNacimiento:
+            "20/08/1998",
 
-        area: "Operaciones",
 
-        ingreso: "20/01/2026",
+        rfc:
+            "XXXX000000XXX",
 
-        estado: "ACTIVO",
 
-        foto: "https://via.placeholder.com/300"
+        codigoPostal:
+            "50010",
+
+
+        imss:
+            "00000000000",
+
+
+        emergenciaNombre1:
+            "Ana García",
+
+
+        emergenciaTelefono1:
+            "555 333 3333",
+
+
+        emergenciaNombre2:
+            "Pedro López",
+
+
+        emergenciaTelefono2:
+            "555 444 4444",
+
+
+        foto:
+            "fotos/maria.jpg"
 
     }
 
 };
 
 
-// Obtener el ID desde el enlace
 
-const parametros = new URLSearchParams(window.location.search);
+/* =====================================
+   OBTENER ID DEL EMPLEADO
+===================================== */
 
-const empleadoID = parametros.get("id");
+
+const parametros =
+    new URLSearchParams(
+        window.location.search
+    );
 
 
-// Buscar empleado
+const empleadoID =
+    parametros.get("id");
 
-const empleado = empleados[empleadoID];
+
+const empleado =
+    empleados[empleadoID];
+
+
+
+/* =====================================
+   MOSTRAR INFORMACIÓN
+===================================== */
 
 
 if (empleado) {
 
-    document.getElementById("nombre").textContent =
+
+    document.getElementById("nombre")
+        .textContent =
         empleado.nombre;
 
-    document.getElementById("puesto").textContent =
+
+    document.getElementById("puesto")
+        .textContent =
         empleado.puesto;
 
-    document.getElementById("id").textContent =
-        empleadoID;
 
-    document.getElementById("area").textContent =
-        empleado.area;
+    document.getElementById("idEmpleado")
+        .textContent =
+        "ID • " + empleadoID;
 
-    document.getElementById("ingreso").textContent =
-        empleado.ingreso;
 
-    document.getElementById("estado").textContent =
-        empleado.estado;
+    document.getElementById("telefono")
+        .textContent =
+        empleado.telefono;
 
-    document.getElementById("foto").src =
+
+    document.getElementById("correo")
+        .textContent =
+        empleado.correo;
+
+
+    document.getElementById("fechaNacimiento")
+        .textContent =
+        empleado.fechaNacimiento;
+
+
+    document.getElementById("rfc")
+        .textContent =
+        empleado.rfc;
+
+
+    document.getElementById("codigoPostal")
+        .textContent =
+        empleado.codigoPostal;
+
+
+    document.getElementById("imss")
+        .textContent =
+        empleado.imss;
+
+
+    document.getElementById("emergenciaNombre1")
+        .textContent =
+        empleado.emergenciaNombre1;
+
+
+    document.getElementById("emergenciaTelefono1")
+        .textContent =
+        empleado.emergenciaTelefono1;
+
+
+    document.getElementById("emergenciaNombre2")
+        .textContent =
+        empleado.emergenciaNombre2;
+
+
+    document.getElementById("emergenciaTelefono2")
+        .textContent =
+        empleado.emergenciaTelefono2;
+
+
+    document.getElementById("foto")
+        .src =
         empleado.foto;
-
-} else {
-
-    document.getElementById("nombre").textContent =
-        "Empleado no encontrado";
-
-    document.getElementById("puesto").textContent =
-        "Verifica el código de empleado";
-
-    document.getElementById("estado").style.display =
-        "none";
 
 }
 
+
+/* =====================================
+   EMPLEADO NO ENCONTRADO
+===================================== */
+
+
+else {
+
+
+    document.getElementById("credencial")
+        .innerHTML = `
+
+            <div class="error">
+
+                <h2>
+                    Empleado no encontrado
+                </h2>
+
+                <br>
+
+                <p>
+                    Verifica el código
+                    del empleado.
+                </p>
+
+            </div>
+
+        `;
+
+}
+
+
+
+/* =====================================
+   ABRIR VENTANA DE SEGURIDAD
+===================================== */
+
+
+function abrirSeguridad() {
+
+
+    document
+        .getElementById(
+            "modalSeguridad"
+        )
+        .classList
+        .add("mostrar");
+
+
+    document
+        .getElementById("inputAño")
+        .value = "";
+
+
+    document
+        .getElementById("mensajeError")
+        .classList
+        .remove("mostrar");
+
+
+    setTimeout(() => {
+
+        document
+            .getElementById("inputAño")
+            .focus();
+
+    }, 100);
+
+}
+
+
+
+/* =====================================
+   CERRAR VENTANA
+===================================== */
+
+
+function cerrarSeguridad() {
+
+
+    document
+        .getElementById(
+            "modalSeguridad"
+        )
+        .classList
+        .remove("mostrar");
+
+}
+
+
+
+/* =====================================
+   VALIDAR AÑO
+===================================== */
+
+
+function validarAño() {
+
+
+    const añoIngresado =
+
+        document
+            .getElementById("inputAño")
+            .value;
+
+
+    const añoCorrecto =
+
+        empleado.fechaNacimiento
+            .slice(-4);
+
+
+
+    if (
+        añoIngresado ===
+        añoCorrecto
+    ) {
+
+
+        document
+            .getElementById(
+                "modalSeguridad"
+            )
+            .classList
+            .remove("mostrar");
+
+
+        document
+            .getElementById(
+                "informacionAdmin"
+            )
+            .classList
+            .add("mostrar");
+
+
+        document
+            .getElementById(
+                "botonAdmin"
+            )
+            .textContent =
+            "🔒 Ocultar información administrativa";
+
+
+        document
+            .getElementById(
+                "botonAdmin"
+            )
+            .onclick =
+            ocultarAdministracion;
+
+
+    }
+
+
+    else {
+
+
+        document
+            .getElementById(
+                "mensajeError"
+            )
+            .classList
+            .add("mostrar");
+
+    }
+
+}
+
+
+
+/* =====================================
+   OCULTAR INFORMACIÓN
+===================================== */
+
+
+function ocultarAdministracion() {
+
+
+    document
+        .getElementById(
+            "informacionAdmin"
+        )
+        .classList
+        .remove("mostrar");
+
+
+    document
+        .getElementById(
+            "botonAdmin"
+        )
+        .textContent =
+        "🔐 Ver información administrativa";
+
+
+    document
+        .getElementById(
+            "botonAdmin"
+        )
+        .onclick =
+        abrirSeguridad;
+
+}
+
+
 </script>
 
+
 </body>
+
 </html>
+```
