@@ -1,5 +1,5 @@
-Carpeta de fotos de empleados
-==============================
+Carpeta de fotos de empleados y logo
+=====================================
 
 Sube aquí la foto de cada empleado con EXACTAMENTE este nombre
 de archivo (respeta minúsculas y el número con 3 dígitos),
@@ -10,6 +10,11 @@ en formato .jpg:
     emp003.jpg   -> (libre para el próximo empleado)
     emp004.jpg   -> (libre para el próximo empleado)
     emp005.jpg   -> (libre para el próximo empleado)
+
+Sube también el logo de la empresa con este nombre exacto,
+en formato .png (para que se vea el fondo transparente):
+
+    logo.png     -> Logo de la empresa (arriba de todo, en el encabezado)
 
 El nombre del archivo va ligado al ID interno del empleado
 (EMP001, EMP002...) que está en el objeto "empleados" del
