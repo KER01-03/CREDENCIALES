@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credencial de empleado</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+        .credencial {
+            width: 100%;
+            max-width: 380px;
+            background: white;
+
+            border-radius: 20px;
+
+            padding: 30px 25px;
+
+            text-align: center;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            background: #eeeeee;
+        }
+
+        .titulo {
+            font-size: 14px;
+            color: #777;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+        .foto {
+            width: 120px;
+            height: 120px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 4px solid #eeeeee;
+
+            margin: 10px auto 20px;
+
+            display: block;
+        }
+
+        .nombre {
+            font-size: 24px;
+
+            font-weight: bold;
+
+            color: #222;
+
+            margin-bottom: 5px;
+        }
+
+        .puesto {
+            font-size: 16px;
+
+            color: #666;
+
+            margin-bottom: 25px;
+        }
+
+        .datos {
+            text-align: left;
+
+            border-top: 1px solid #eeeeee;
+
+            padding-top: 15px;
+        }
+
+        .dato {
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 10px 0;
+
+            border-bottom: 1px solid #eeeeee;
+
+            font-size: 14px;
+        }
+
+        .etiqueta {
+            color: #777;
+
+            font-weight: bold;
+        }
+
+        .valor {
+            color: #222;
+
+            text-align: right;
+        }
+
+        .estado {
+            margin-top: 20px;
+
+            display: inline-block;
+
+            padding: 8px 18px;
+
+            border-radius: 20px;
+
+            background: #e8f7ed;
+
+            color: #218838;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+        .id {
+            margin-top: 20px;
+
+            color: #999;
+
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="credencial">
+
+        <img 
+            class="logo"
+            src="https://via.placeholder.com/150"
+            alt="Logo"
+        >
+
+        <div class="titulo">
+            Credencial de empleado
+        </div>
+
+        <img 
+            id="foto"
+            class="foto"
+            src="https://via.placeholder.com/300"
+            alt="Foto del empleado"
+        >
+
+        <div id="nombre" class="nombre">
+            Cargando...
+        </div>
+
+        <div id="puesto" class="puesto">
+        </div>
+
+        <div class="datos">
+
+            <div class="dato">
+                <span class="etiqueta">ID</span>
+                <span id="id" class="valor"></span>
+            </div>
+
+            <div class="dato">
+                <span class="etiqueta">Área</span>
+                <span id="area" class="valor"></span>
+            </div>
+
+            <div class="dato">
+                <span class="etiqueta">Ingreso</span>
+                <span id="ingreso" class="valor"></span>
+            </div>
+
+        </div>
+
+        <div id="estado" class="estado">
+        </div>
+
+    </div>
+
+
+<script>
+
+const empleados = {
+
+    "EMP001": {
+
+        nombre: "Juan Pérez López",
+
+        puesto: "Ejecutivo de ventas",
+
+        area: "Ventas",
+
+        ingreso: "10/02/2026",
+
+        estado: "ACTIVO",
+
+        foto: "https://via.placeholder.com/300"
+
+    },
+
+    "EMP002": {
+
+        nombre: "María López García",
+
+        puesto: "Recepcionista",
+
+        area: "Administración",
+
+        ingreso: "15/03/2026",
+
+        estado: "ACTIVO",
+
+        foto: "https://via.placeholder.com/300"
+
+    },
+
+    "EMP003": {
+
+        nombre: "Carlos Hernández",
+
+        puesto: "Supervisor",
+
+        area: "Operaciones",
+
+        ingreso: "20/01/2026",
+
+        estado: "ACTIVO",
+
+        foto: "https://via.placeholder.com/300"
+
+    }
+
+};
+
+
+// Obtener el ID desde el enlace
+
+const parametros = new URLSearchParams(window.location.search);
+
+const empleadoID = parametros.get("id");
+
+
+// Buscar empleado
+
+const empleado = empleados[empleadoID];
+
+
+if (empleado) {
+
+    document.getElementById("nombre").textContent =
+        empleado.nombre;
+
+    document.getElementById("puesto").textContent =
+        empleado.puesto;
+
+    document.getElementById("id").textContent =
+        empleadoID;
+
+    document.getElementById("area").textContent =
+        empleado.area;
+
+    document.getElementById("ingreso").textContent =
+        empleado.ingreso;
+
+    document.getElementById("estado").textContent =
+        empleado.estado;
+
+    document.getElementById("foto").src =
+        empleado.foto;
+
+} else {
+
+    document.getElementById("nombre").textContent =
+        "Empleado no encontrado";
+
+    document.getElementById("puesto").textContent =
+        "Verifica el código de empleado";
+
+    document.getElementById("estado").style.display =
+        "none";
+
+}
+
+</script>
+
+</body>
+</html>
