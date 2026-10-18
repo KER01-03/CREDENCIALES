@@ -129,45 +129,6 @@ body {
 
 
 /* =====================================
-   FOTO
-===================================== */
-
-.contenedor-foto {
-
-    position: absolute;
-
-    left: 50%;
-
-    bottom: -65px;
-
-    transform:
-        translateX(-50%);
-
-}
-
-
-.foto {
-
-    width: 130px;
-
-    height: 130px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 6px solid white;
-
-    background: #eeeeee;
-
-    box-shadow:
-        0 5px 18px
-        rgba(0,0,0,0.20);
-
-}
-
-
-/* =====================================
    INFORMACIÓN PRINCIPAL
 ===================================== */
 
@@ -176,7 +137,7 @@ body {
     text-align: center;
 
     padding:
-        82px 25px 25px;
+        30px 25px 25px;
 
 }
 
@@ -195,90 +156,6 @@ body {
 
 }
 
-
-
-
-/* =====================================
-   CONTACTO
-===================================== */
-
-.contacto {
-
-    margin:
-        0 0 15px;
-
-    padding: 17px;
-
-    background: #f5f7fa;
-
-    border-radius: 16px;
-
-}
-
-
-.contacto-item {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 8px 0;
-
-}
-
-
-.icono {
-
-    width: 34px;
-
-    height: 34px;
-
-    border-radius: 10px;
-
-    background: #071a33;
-
-    color: white;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
-
-.contacto-texto {
-
-    text-align: left;
-
-    overflow: hidden;
-
-}
-
-
-.contacto-etiqueta {
-
-    font-size: 10px;
-
-    color: #8a94a3;
-
-    display: block;
-
-}
-
-
-.contacto-valor {
-
-    font-size: 14px;
-
-    color: #202733;
-
-    word-break: break-word;
-
-}
 
 
 /* =====================================
@@ -332,50 +209,10 @@ body {
 
 
 /* =====================================
-   BOTÓN ADMINISTRATIVO
-===================================== */
-
-.boton-admin {
-
-    width:
-        calc(100% - 40px);
-
-    margin:
-        0 20px 20px;
-
-    padding: 14px;
-
-    border: none;
-
-    border-radius: 13px;
-
-    background: #071a33;
-
-    color: white;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-}
-
-
-.boton-admin:hover {
-
-    background: #0d2d52;
-
-}
-
-
-/* =====================================
    INFORMACIÓN ADMINISTRATIVA
 ===================================== */
 
 .informacion-admin {
-
-    display: none;
 
     padding:
         0 20px 25px;
@@ -383,11 +220,6 @@ body {
 }
 
 
-.informacion-admin.mostrar {
-
-    display: block;
-
-}
 
 
 .titulo-seccion {
@@ -477,201 +309,6 @@ body {
 
 
 /* =====================================
-   MODAL DE SEGURIDAD
-===================================== */
-
-.modal {
-
-    display: none;
-
-    position: fixed;
-
-    inset: 0;
-
-    background:
-        rgba(0,0,0,0.65);
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 20px;
-
-    z-index: 1000;
-
-}
-
-
-.modal.mostrar {
-
-    display: flex;
-
-}
-
-
-.modal-contenido {
-
-    width: 100%;
-
-    max-width: 350px;
-
-    background: white;
-
-    border-radius: 22px;
-
-    padding: 28px 25px;
-
-    text-align: center;
-
-    box-shadow:
-        0 15px 45px
-        rgba(0,0,0,0.35);
-
-}
-
-
-.icono-seguridad {
-
-    width: 60px;
-
-    height: 60px;
-
-    margin:
-        0 auto 15px;
-
-    background: #071a33;
-
-    color: white;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 25px;
-
-}
-
-
-.modal-titulo {
-
-    color: #071a33;
-
-    font-size: 20px;
-
-    font-weight: bold;
-
-    margin-bottom: 8px;
-
-}
-
-
-.modal-texto {
-
-    color: #777;
-
-    font-size: 13px;
-
-    line-height: 1.5;
-
-    margin-bottom: 20px;
-
-}
-
-
-.input-año {
-
-    width: 100%;
-
-    padding: 13px;
-
-    border:
-        1px solid #d9dee5;
-
-    border-radius: 12px;
-
-    text-align: center;
-
-    font-size: 18px;
-
-    outline: none;
-
-    margin-bottom: 12px;
-
-}
-
-
-.input-año:focus {
-
-    border-color: #071a33;
-
-}
-
-
-.boton-continuar {
-
-    width: 100%;
-
-    padding: 13px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    background: #071a33;
-
-    color: white;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-}
-
-
-.boton-cancelar {
-
-    width: 100%;
-
-    padding: 12px;
-
-    border: none;
-
-    background: transparent;
-
-    color: #777;
-
-    margin-top: 5px;
-
-    cursor: pointer;
-
-}
-
-
-.mensaje-error {
-
-    color: #c62828;
-
-    font-size: 12px;
-
-    margin-top: 10px;
-
-    display: none;
-
-}
-
-
-.mensaje-error.mostrar {
-
-    display: block;
-
-}
-
-
-/* =====================================
    PIE
 ===================================== */
 
@@ -741,20 +378,6 @@ body {
         </div>
 
 
-        <div class="contenedor-foto">
-
-
-            <img
-                id="foto"
-                src="fotos/juan.jpg"
-                class="foto"
-                alt="Foto del empleado"
-            >
-
-
-        </div>
-
-
     </div>
 
 
@@ -798,196 +421,12 @@ body {
 
 
 
-    <!-- BOTÓN -->
-
-    <button
-        class="boton-admin"
-        id="botonAdmin"
-        onclick="abrirSeguridad()"
-    >
-
-        🔐 Ver información administrativa
-
-    </button>
-
-
-
     <!-- INFORMACIÓN ADMINISTRATIVA -->
 
     <div
         class="informacion-admin"
         id="informacionAdmin"
     >
-
-
-        <div class="titulo-seccion">
-
-            Información de contacto
-
-        </div>
-
-
-        <div class="contacto">
-
-
-            <div class="contacto-item">
-
-
-                <div class="icono">
-                    📱
-                </div>
-
-
-                <div class="contacto-texto">
-
-
-                    <span
-                        class="contacto-etiqueta"
-                    >
-
-                        TELÉFONO
-
-                    </span>
-
-
-                    <span
-                        id="telefono"
-                        class="contacto-valor"
-                    >
-
-                    </span>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="contacto-item">
-
-
-                <div class="icono">
-                    ✉️
-                </div>
-
-
-                <div class="contacto-texto">
-
-
-                    <span
-                        class="contacto-etiqueta"
-                    >
-
-                        CORREO
-
-                    </span>
-
-
-                    <span
-                        id="correo"
-                        class="contacto-valor"
-                    >
-
-                    </span>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-        <div class="titulo-seccion">
-
-            Información personal
-
-        </div>
-
-
-        <div class="dato">
-
-            <span class="etiqueta">
-
-                CURP
-
-            </span>
-
-            <span
-                id="curp"
-                class="valor"
-            >
-
-            </span>
-
-        </div>
-
-
-        <div class="dato">
-
-            <span class="etiqueta">
-
-                Fecha de nacimiento
-
-            </span>
-
-            <span
-                id="fechaNacimiento"
-                class="valor"
-            >
-
-            </span>
-
-        </div>
-
-
-
-        <div class="titulo-seccion">
-
-            Información fiscal
-
-        </div>
-
-
-        <div class="dato">
-
-            <span class="etiqueta">
-
-                RFC
-
-            </span>
-
-            <span
-                id="rfc"
-                class="valor"
-            >
-
-            </span>
-
-        </div>
-
-
-        <div class="dato">
-
-            <span class="etiqueta">
-
-                Código postal de la
-                constancia de situación fiscal
-
-            </span>
-
-            <span
-                id="codigoPostal"
-                class="valor"
-            >
-
-            </span>
-
-        </div>
 
 
 
@@ -1002,7 +441,7 @@ body {
 
             <span class="etiqueta">
 
-                Número de afiliación al IMSS
+                NSS (Número de Seguridad Social)
 
             </span>
 
@@ -1140,97 +579,6 @@ body {
 
 
 
-<!-- ===================================
-     VENTANA DE SEGURIDAD
-=================================== -->
-
-<div
-    class="modal"
-    id="modalSeguridad"
->
-
-
-    <div class="modal-contenido">
-
-
-        <div class="icono-seguridad">
-
-            🔐
-
-        </div>
-
-
-        <div class="modal-titulo">
-
-            Información protegida
-
-        </div>
-
-
-        <div class="modal-texto">
-
-            Para consultar la información
-            administrativa, introduce tu
-            año de nacimiento.
-
-        </div>
-
-
-        <input
-
-            type="number"
-
-            id="inputAño"
-
-            class="input-año"
-
-            placeholder="Ej. 1995"
-
-            min="1900"
-
-            max="2100"
-
-        >
-
-
-        <button
-            class="boton-continuar"
-            onclick="validarAño()"
-        >
-
-            Continuar
-
-        </button>
-
-
-        <button
-            class="boton-cancelar"
-            onclick="cerrarSeguridad()"
-        >
-
-            Cancelar
-
-        </button>
-
-
-        <div
-            id="mensajeError"
-            class="mensaje-error"
-        >
-
-            El año de nacimiento
-            no coincide.
-
-        </div>
-
-
-    </div>
-
-
-</div>
-
-
-
 <script>
 
 
@@ -1253,30 +601,6 @@ const empleados = {
             "Ejecutivo de ventas",
 
 
-        telefono:
-            "7221069267",
-
-
-        correo:
-            "jonathanbarreraricardo326@gmail.com",
-
-
-        curp:
-            "",
-
-
-        fechaNacimiento:
-            "03/09/2002",
-
-
-        rfc:
-            "BARJ020903RC6",
-
-
-        codigoPostal:
-            "50870",
-
-
         imss:
             "66170233952",
 
@@ -1294,11 +618,7 @@ const empleados = {
 
 
         emergenciaTelefono2:
-            "7204709272",
-
-
-        foto:
-            "fotos/emp001.jpg"
+            "7204709272"
 
     },
 
@@ -1312,30 +632,6 @@ const empleados = {
 
         puesto:
             "Recepcionista",
-
-
-        telefono:
-            "555 666 6666",
-
-
-        correo:
-            "maria@ejemplo.com",
-
-
-        curp:
-            "",
-
-
-        fechaNacimiento:
-            "20/08/1998",
-
-
-        rfc:
-            "XXXX000000XXX",
-
-
-        codigoPostal:
-            "50010",
 
 
         imss:
@@ -1355,11 +651,7 @@ const empleados = {
 
 
         emergenciaTelefono2:
-            "555 444 4444",
-
-
-        foto:
-            "fotos/emp002.jpg"
+            "555 444 4444"
 
     },
 
@@ -1372,24 +664,6 @@ const empleados = {
         puesto:
             "",
 
-        telefono:
-            "",
-
-        correo:
-            "",
-
-        curp:
-            "",
-
-        fechaNacimiento:
-            "",
-
-        rfc:
-            "",
-
-        codigoPostal:
-            "",
-
         imss:
             "",
 
@@ -1403,10 +677,7 @@ const empleados = {
             "",
 
         emergenciaTelefono2:
-            "",
-
-        foto:
-            "fotos/emp003.jpg"
+            ""
 
     },
 
@@ -1419,24 +690,6 @@ const empleados = {
         puesto:
             "",
 
-        telefono:
-            "",
-
-        correo:
-            "",
-
-        curp:
-            "",
-
-        fechaNacimiento:
-            "",
-
-        rfc:
-            "",
-
-        codigoPostal:
-            "",
-
         imss:
             "",
 
@@ -1450,10 +703,7 @@ const empleados = {
             "",
 
         emergenciaTelefono2:
-            "",
-
-        foto:
-            "fotos/emp004.jpg"
+            ""
 
     },
 
@@ -1466,24 +716,6 @@ const empleados = {
         puesto:
             "",
 
-        telefono:
-            "",
-
-        correo:
-            "",
-
-        curp:
-            "",
-
-        fechaNacimiento:
-            "",
-
-        rfc:
-            "",
-
-        codigoPostal:
-            "",
-
         imss:
             "",
 
@@ -1497,10 +729,7 @@ const empleados = {
             "",
 
         emergenciaTelefono2:
-            "",
-
-        foto:
-            "fotos/emp005.jpg"
+            ""
 
     }
 
@@ -1587,36 +816,6 @@ if (empleado) {
         empleado.nombre;
 
 
-    document.getElementById("telefono")
-        .textContent =
-        empleado.telefono;
-
-
-    document.getElementById("correo")
-        .textContent =
-        empleado.correo;
-
-
-    document.getElementById("curp")
-        .textContent =
-        empleado.curp;
-
-
-    document.getElementById("fechaNacimiento")
-        .textContent =
-        empleado.fechaNacimiento;
-
-
-    document.getElementById("rfc")
-        .textContent =
-        empleado.rfc;
-
-
-    document.getElementById("codigoPostal")
-        .textContent =
-        empleado.codigoPostal;
-
-
     document.getElementById("imss")
         .textContent =
         empleado.imss;
@@ -1641,10 +840,6 @@ if (empleado) {
         .textContent =
         empleado.emergenciaTelefono2;
 
-
-    document.getElementById("foto")
-        .src =
-        empleado.foto;
 
 }
 
@@ -1679,177 +874,6 @@ else {
 
 }
 
-
-
-/* =====================================
-   ABRIR VENTANA DE SEGURIDAD
-===================================== */
-
-
-function abrirSeguridad() {
-
-
-    document
-        .getElementById(
-            "modalSeguridad"
-        )
-        .classList
-        .add("mostrar");
-
-
-    document
-        .getElementById("inputAño")
-        .value = "";
-
-
-    document
-        .getElementById("mensajeError")
-        .classList
-        .remove("mostrar");
-
-
-    setTimeout(() => {
-
-        document
-            .getElementById("inputAño")
-            .focus();
-
-    }, 100);
-
-}
-
-
-
-/* =====================================
-   CERRAR VENTANA
-===================================== */
-
-
-function cerrarSeguridad() {
-
-
-    document
-        .getElementById(
-            "modalSeguridad"
-        )
-        .classList
-        .remove("mostrar");
-
-}
-
-
-
-/* =====================================
-   VALIDAR AÑO
-===================================== */
-
-
-function validarAño() {
-
-
-    const añoIngresado =
-
-        document
-            .getElementById("inputAño")
-            .value;
-
-
-    const añoCorrecto =
-
-        empleado.fechaNacimiento
-            .slice(-4);
-
-
-
-    if (
-        añoIngresado ===
-        añoCorrecto
-    ) {
-
-
-        document
-            .getElementById(
-                "modalSeguridad"
-            )
-            .classList
-            .remove("mostrar");
-
-
-        document
-            .getElementById(
-                "informacionAdmin"
-            )
-            .classList
-            .add("mostrar");
-
-
-        document
-            .getElementById(
-                "botonAdmin"
-            )
-            .textContent =
-            "🔒 Ocultar información administrativa";
-
-
-        document
-            .getElementById(
-                "botonAdmin"
-            )
-            .onclick =
-            ocultarAdministracion;
-
-
-    }
-
-
-    else {
-
-
-        document
-            .getElementById(
-                "mensajeError"
-            )
-            .classList
-            .add("mostrar");
-
-    }
-
-}
-
-
-
-/* =====================================
-   OCULTAR INFORMACIÓN
-===================================== */
-
-
-function ocultarAdministracion() {
-
-
-    document
-        .getElementById(
-            "informacionAdmin"
-        )
-        .classList
-        .remove("mostrar");
-
-
-    document
-        .getElementById(
-            "botonAdmin"
-        )
-        .textContent =
-        "🔐 Ver información administrativa";
-
-
-    document
-        .getElementById(
-            "botonAdmin"
-        )
-        .onclick =
-        abrirSeguridad;
-
-}
 
 
 </script>
